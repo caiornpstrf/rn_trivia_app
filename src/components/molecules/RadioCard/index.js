@@ -6,7 +6,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-12 04:16:13
- * Last modified  : 2021-04-12 05:08:05
+ * Last modified  : 2021-04-12 06:21:45
  */
 
 import React from 'react';
@@ -33,8 +33,7 @@ RadioCard.propTypes = {
 };
 
 RadioCard.defaultProps = {
-  description:
-    'sdnas jdnasijdn aoisjd oiajsbd oiasbd iahsjbd ioasbdo iasbd iohjasbdi',
+  description: '',
   isSelected: false,
   onPress: () => console.log('Pressed RadioCard'),
 };

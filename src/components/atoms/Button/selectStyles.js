@@ -4,8 +4,7 @@ import {Colors, ShadowStyles, StyleHelpers} from '_assets/styles';
 const sharedStyles = {
   container: {
     // General
-    flex: 1,
-    maxHeight: 50,
+    height: 45,
     // Alignment
     alignItems: 'center',
     justifyContent: 'center',
@@ -28,7 +27,7 @@ const styles = {
       backgroundColor: Colors.button,
       // Border
       borderColor: Colors.altTitle,
-      borderWidth: 1.5,
+      borderWidth: 1,
     },
     text: {
       ...sharedStyles.text,

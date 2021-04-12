@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-11 16:47:09
- * Last modified  : 2021-04-12 03:28:50
+ * Last modified  : 2021-04-12 06:13:34
  */
 
 const primary = '#343D58';
@@ -23,4 +23,6 @@ export default {
   title: primary,
   altTitle: secondary,
   selection: tertiary,
+  success: '#32CB82',
+  error: '#FF6660',
 };

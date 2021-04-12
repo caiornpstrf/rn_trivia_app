@@ -1,3 +1,11 @@
+/**
+ * @summary list of answers of a given Question
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-12 06:35:17
+ * Last modified  : 2021-04-12 06:36:03
+ */
+
 import React, {useState} from 'react';
 import {StyleSheet, ScrollView} from 'react-native';
 import {array, func} from 'prop-types';
@@ -31,7 +39,7 @@ AnswersList.propTypes = {
 
 AnswersList.defaultProps = {
   onItemSelected: ({item, index}) => console.log(`Selected index: ${index}`),
-}
+};
 
 export default AnswersList;
 
