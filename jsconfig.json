@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "out",
+      "sourceMap": true,
+      "sourceRoot": "./src",
+      "baseUrl": ".",
+      "paths": {
+        "*": ["src/*"],
+        "_components/*": ["./src/components/*"],
+        "_assets/*": ["src/assets/*"],
+      }
+  }
+}
