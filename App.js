@@ -28,7 +28,7 @@ const App = () => {
           <Card>
             <Button type="answer" />
             <Description>Description</Description>
-            <DifficultyIndicator maxDifficulty={3} currentDifficulty={3} />
+            <DifficultyIndicator />
             <Title>Title</Title>
           </Card>
         </View>
