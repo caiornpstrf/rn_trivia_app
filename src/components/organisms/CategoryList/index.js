@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-12 06:00:13
- * Last modified  : 2021-04-12 06:35:10
+ * Last modified  : 2021-04-12 07:48:15
  */
 
 import React from 'react';
@@ -40,7 +40,7 @@ export default CategoryList;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    paddingBottom: 20,
   },
   card: {
     marginBottom: 15,

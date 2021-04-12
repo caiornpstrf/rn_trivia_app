@@ -5,19 +5,13 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, StatusBar, View} from 'react-native';
+import {View} from 'react-native';
+import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
-import {
-  Button,
-  Card,
-  Description,
-  DifficultyIndicator,
-  Title,
-} from '_components/atoms';
-import {QuestionDetails, QuestionResult} from '_components/molecules';
-import {CategoryList} from '_components/organisms';
+import RootNavigation from '_navigation';
 import {Colors} from '_assets/styles';
 
 const App = () => {
@@ -26,12 +20,9 @@ const App = () => {
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.header} />
       <SafeAreaView style={styles.container}>
-        <View style={styles.content}>
-          <QuestionResult />
-          <View style={{flex:1}}>
-            <CategoryList data={['a', 'b', 'c', 'd']} />
-          </View>
-        </View>
+        <NavigationContainer>
+          <RootNavigation />
+        </NavigationContainer>
       </SafeAreaView>
     </>
   );
@@ -45,11 +36,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.background,
-  },
-  content: {
-    flex: 1,
-    paddingHorizontal: 10,
-    paddingVertical: 20,
   },
 });
 

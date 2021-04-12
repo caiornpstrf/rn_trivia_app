@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-11 16:47:09
- * Last modified  : 2021-04-12 06:13:34
+ * Last modified  : 2021-04-12 07:36:46
  */
 
 const primary = '#343D58';
@@ -20,6 +20,7 @@ export default {
   button: '#F7F7F7',
   answerButton: tertiary,
   text: '#171717',
+  lightText: '#EEEEEE',
   title: primary,
   altTitle: secondary,
   selection: tertiary,
