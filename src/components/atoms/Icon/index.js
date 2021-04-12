@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-12 02:59:55
- * Last modified  : 2021-04-12 03:09:12
+ * Last modified  : 2021-04-12 05:27:15
  */
 
 import React from 'react';
@@ -12,7 +12,7 @@ import {number, string} from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const CustomIcon = ({name, size, color, ...rest}) => {
-  return <Icon name="rocket" size={size} color={color} {...rest} />;
+  return <Icon name={name} size={size} color={color} {...rest} />;
 };
 
 CustomIcon.propTypes = {

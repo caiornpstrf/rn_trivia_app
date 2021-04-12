@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-11 19:57:42
- * Last modified  : 2021-04-11 20:44:51
+ * Last modified  : 2021-04-12 04:03:40
  */
 
 import React from 'react';
@@ -15,7 +15,9 @@ import selectStyles from './selectStyles';
 const Button = ({label, type, onPress}) => {
   const styles = selectStyles(type);
   return (
-    <Pressable style={styles.container} onPress={onPress}>
+    <Pressable
+      style={({pressed}) => [styles.container, pressed && {opacity: 0.8}]}
+      onPress={onPress}>
       <Text style={styles.text}>{label}</Text>
     </Pressable>
   );
@@ -28,9 +30,9 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  label: 'Default Label',
+  label: '',
   type: 'default',
-  onPress: () => console.log('Pressed button'),
+  onPress: () => console.log('Pressed Button'),
 };
 
 export default Button;

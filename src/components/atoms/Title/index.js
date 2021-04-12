@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-11 19:57:02
- * Last modified  : 2021-04-11 20:08:11
+ * Last modified  : 2021-04-12 05:27:31
  */
 
 import React from 'react';
@@ -14,13 +14,15 @@ import {Colors, StyleHelpers} from '_assets/styles';
 
 const sizeMapping = {
   small: StyleHelpers.normalize(12),
-  medium: StyleHelpers.normalize(16),
-  big: StyleHelpers.normalize(20),
+  medium: StyleHelpers.normalize(15),
+  big: StyleHelpers.normalize(18),
 };
 
-const Title = ({children, size}) => {
+const Title = ({children, size, style}) => {
   return (
-    <Text style={[styles.text, {fontSize: sizeMapping[size]}]}>{children}</Text>
+    <Text style={[styles.text, style, {fontSize: sizeMapping[size]}]}>
+      {children}
+    </Text>
   );
 };
 
@@ -29,7 +31,7 @@ Title.propTypes = {
 };
 
 Title.defaultProps = {
-  size: 'medium',
+  size: 'small',
 };
 
 export default Title;

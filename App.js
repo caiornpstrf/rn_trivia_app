@@ -16,6 +16,8 @@ import {
   DifficultyIndicator,
   Title,
 } from '_components/atoms';
+import {QuestionDetails} from '_components/molecules';
+import {AnswersList} from '_components/organisms';
 import {Colors} from '_assets/styles';
 
 const App = () => {
@@ -25,12 +27,10 @@ const App = () => {
       <SafeAreaView style={styles.header} />
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
-          <Card>
-            <Button type="answer" />
-            <Description>Description</Description>
-            <DifficultyIndicator />
-            <Title>Title</Title>
-          </Card>
+          <QuestionDetails />
+          <View style={{flex:1}}>
+            <AnswersList data={['a', 'b', 'c', 'd']} />
+          </View>
         </View>
       </SafeAreaView>
     </>
