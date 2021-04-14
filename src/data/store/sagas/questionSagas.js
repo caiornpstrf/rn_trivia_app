@@ -1,16 +1,19 @@
-import {call, put, takeLatest} from 'redux-saga/effects';
+import {call, put, takeLatest, take} from 'redux-saga/effects';
 
-import {isLoading, hasError} from '_store/actions/appState';
-import {setCategories} from '_store/actions/questions';
+import {isLoading, hasError} from 'data/store/actions/appState';
+import {setCategories, setQuestionList} from 'data/store/actions/questions';
+
 import AsyncHandler from '_model/AsyncHandler';
+import Question from '_model/Question';
+import Category from '_model/Category';
 
-const BASE_URL = 'https://opentdb.com/api.php';
+const BASE_URL = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=hard';
 const CATEGORY_URL = 'https://opentdb.com/api_category.php';
 const INFO = {
-  method: 'GET',
+  method: 'POST',
   headers: {
-    Accept: '*/*',
-    //'Content-Type': 'application/json',
+    Accept: 'application/json',
+    'Content-Type': 'application/x-www-form-urlencoded',
   },
 };
 
@@ -28,28 +31,52 @@ function* callFetchDataForCategoryList(action) {
     requestInfo: INFO,
     params: null,
   };
-  const info = yield callFetchData(request_info);
 
-  if (info && info[0]) {
-    yield put(setCategories(true));
-  } else {
-    yield put(isLoading(false));
+  const info = yield callFetchData(request_info);
+  if (info && info.trivia_categories) {
+    let categoryList = [];
+    info.trivia_categories.map(category =>
+      categoryList.push(new Category(category.id, category.name)),
+    );
+
+    yield put(setCategories(categoryList));
   }
 }
 
+function parseRequestListToQuestionList(list = []) {
+  let questionList = [];
+  list.forEach(generic => {
+    let question = new Question();
+    question.parseRequestObjectToQuestion(generic);
+    questionList.push(question);
+  });
+
+  return questionList;
+}
+
 function* callFetchDataForQuestionList(action) {
+  const difficulties = ['easy', 'medium', 'hard'];
   const request_info = {
     url: BASE_URL,
     requestInfo: INFO,
-    params: action.category,
+    params: {
+      amount: 10,
+      category: action.category.id,
+      encode: 'url3986',
+    },
   };
-  const info = yield callFetchData(request_info);
 
-  if (info && info[0]) {
-    yield put(setCategories(true));
-  } else {
-    yield put(isLoading(false));
+  let questionList = [];
+  for (const difficulty of difficulties) {
+    request_info.params.difficulty = difficulty;
+    const info = yield callFetchData(request_info);
+    if (info && info.results) {
+      questionList = questionList.concat(info.results);
+    }
   }
+
+  questionList = parseRequestListToQuestionList(questionList);
+  yield put(setQuestionList(questionList));
 }
 
 function* callFetchData(request_info) {

@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-12 06:00:13
- * Last modified  : 2021-04-12 07:48:15
+ * Last modified  : 2021-04-14 02:58:28
  */
 
 import React from 'react';
@@ -17,8 +17,8 @@ const CategoryList = ({data, onItemSelected}) => {
     <ScrollView contentContainerStyle={styles.container}>
       {data.map((item, index) => (
         <Button
-          key={`category_${index}`}
-          label={item}
+          key={item.id}
+          label={item.name}
           onPress={() => onItemSelected({item, index})}
           style={styles.card}
         />

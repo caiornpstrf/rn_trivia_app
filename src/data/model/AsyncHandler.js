@@ -5,17 +5,17 @@ class AsyncHandler {
    * @param {object} params Request parameters
    * @returns A new URL with params
    */
-  static addParamsToUrl = (url, params) => {
+  static parseParams = (params) => {
     if (!params) {
-      return url;
+      return undefined;
     }
-    const paramsString = Object.keys(params)
+    const body = Object.keys(params)
       .map(k => {
         return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
       })
       .join('&');
 
-    return `${url}?${paramsString}`;
+    return body;
   };
 
   static fetchData = async ({
@@ -25,10 +25,8 @@ class AsyncHandler {
     onError = () => {},
   }) => {
     try {
-      const response = await fetch(
-        AsyncHandler.addParamsToUrl(url, params),
-        requestInfo,
-      );
+      const body = AsyncHandler.parseParams(params);
+      const response = await fetch(url, {...requestInfo, body});
       return response.json();
     } catch (error) {
       onError();

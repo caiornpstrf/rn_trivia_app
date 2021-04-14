@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 01:21:45
- * Last modified  : 2021-04-14 02:31:00
+ * Last modified  : 2021-04-14 05:14:08
  */
 
 /* eslint-disable react-hooks/exhaustive-deps */
@@ -24,7 +24,7 @@ const RootNavigation = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch({type: 'LOADING_STATUS', value: false});
+    dispatch({type: 'FETCH_CATEGORY_LIST'});
   }, [isLoading]);
 
   if (isLoading) {
@@ -42,7 +42,7 @@ const RootNavigation = () => {
         component={Assessment}
         options={({route}) => {
           const {category = ''} = route.params || {};
-          return defaultOptions(category);
+          return defaultOptions(category.name);
         }}
       />
     </Stack.Navigator>

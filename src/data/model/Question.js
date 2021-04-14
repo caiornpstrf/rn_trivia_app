@@ -1,7 +1,5 @@
-import Category from './Category';
-
 export default class Question {
-  category = new Category();
+  category = '';
   type = '';
   difficulty = '';
   question = '';
@@ -9,7 +7,7 @@ export default class Question {
   answers = [];
 
   constructor(
-    category = new Category(),
+    category = '',
     type = '',
     difficulty = '',
     question = '',
@@ -23,4 +21,30 @@ export default class Question {
     this.correctAnswer = correctAnswer;
     this.answers = answers;
   }
+
+  decode = (encodedValue = '') => {
+    return decodeURIComponent(encodedValue);
+  };
+
+  parseRequestObjectToQuestion = (generic = {}) => {
+    const {
+      category = '',
+      type = '',
+      difficulty = '',
+      question = '',
+      correct_answer = '',
+      incorrect_answers = [],
+    } = generic;
+    const decodedCorrect = this.decode(correct_answer);
+    let answers = incorrect_answers.map(a => this.decode(a));
+    answers.push(decodedCorrect);
+
+    this.category = this.decode(category);
+    this.type = this.decode(type);
+    this.difficulty = this.decode(difficulty);
+    this.question = this.decode(question);
+    this.correctAnswer = decodedCorrect;
+    this.answers = answers.sort(() => Math.random() - 0.5);
+    return this;
+  };
 }

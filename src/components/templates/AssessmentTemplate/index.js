@@ -1,10 +1,11 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {array, func, string} from 'prop-types';
+import {array, func, string, bool} from 'prop-types';
 
+import {Button, IfElse} from '_components/atoms';
 import {QuestionDetails, QuestionResult} from '_components/molecules';
 import {AnswersList} from '_components/organisms';
-import {Colors} from '_assets/styles';
+import {Colors, ShadowStyles} from '_assets/styles';
 
 const AssessmentTemplate = ({
   title,
@@ -12,6 +13,9 @@ const AssessmentTemplate = ({
   difficulty,
   answers,
   onItemSelected,
+  displayNextButton,
+  nextButtonLabel,
+  onPressNextButton,
 }) => {
   return (
     <View style={styles.container}>
@@ -21,6 +25,18 @@ const AssessmentTemplate = ({
         difficulty={difficulty}
       />
       <AnswersList data={answers} onItemSelected={onItemSelected} />
+      <IfElse
+        condition={displayNextButton}
+        onTrue={
+          <View style={styles.buttonContainer}>
+            <Button
+              type="answer"
+              label={nextButtonLabel}
+              onPress={onPressNextButton}
+            />
+          </View>
+        }
+      />
     </View>
   );
 };
@@ -31,6 +47,9 @@ AssessmentTemplate.propTypes = {
   difficulty: string.isRequired,
   answers: array.isRequired,
   onItemSelected: func.isRequired,
+  displayNextButton: bool.isRequired,
+  nextButtonLabel: string.isRequired,
+  onPressNextButton: func.isRequired,
 };
 
 export default AssessmentTemplate;
@@ -42,5 +61,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 20,
     backgroundColor: Colors.background,
+  },
+  buttonContainer: {
+    backgroundColor: Colors.background,
+    paddingHorizontal: '15%',
+    paddingVertical: '5%',
+    justifyContent: 'center',
+    alignContent: 'center',
   },
 });

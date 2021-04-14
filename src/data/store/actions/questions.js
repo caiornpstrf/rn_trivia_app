@@ -1,11 +1,13 @@
 export const setCategories = value => {
   return {
-    type: value ? 'CATEGORY_TRUE' : 'CATEGORY_FALSE',
+    type: 'SET_CATEGORY_LIST',
+    value,
   };
 };
 
 export const setQuestionList = value => {
   return {
-    type: value ? 'QUESTION_TRUE' : 'QUESTION_FALSE',
+    type: 'SET_QUESTION_LIST',
+    value,
   };
 };
