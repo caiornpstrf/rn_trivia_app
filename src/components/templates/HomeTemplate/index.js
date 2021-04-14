@@ -4,11 +4,14 @@ import {array, func, string} from 'prop-types';
 
 import {Title} from '_components/atoms';
 import {CategoryList} from '_components/organisms';
+import {Colors} from '_assets/styles';
 
 const HomeTemplate = ({title, categories, onItemSelected}) => {
   return (
     <View style={styles.container}>
-      <Title size="big" style={styles.title}>{title}</Title>
+      <Title size="big" style={styles.title}>
+        {title}
+      </Title>
       <CategoryList data={categories} onItemSelected={onItemSelected} />
     </View>
   );
@@ -28,6 +31,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingVertical: 20,
+    backgroundColor: Colors.background,
   },
   title: {
     marginBottom: 40,

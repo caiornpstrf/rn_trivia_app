@@ -4,6 +4,7 @@ import {array, func, string} from 'prop-types';
 
 import {QuestionDetails, QuestionResult} from '_components/molecules';
 import {AnswersList} from '_components/organisms';
+import {Colors} from '_assets/styles';
 
 const AssessmentTemplate = ({
   title,
@@ -40,5 +41,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 10,
     paddingVertical: 20,
+    backgroundColor: Colors.background,
   },
 });

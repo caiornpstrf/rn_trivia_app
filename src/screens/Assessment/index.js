@@ -6,9 +6,8 @@ const onItemSelected = (category, index, navigation) => {
   navigation.navigate('Assessment');
 };
 
-const Home = ({route, navigation}) => {
-  const {questionList, category} = route.params;
-  navigation.setOptions({title: category});
+const Assessment = ({route, navigation}) => {
+  const {questionList = []} = route.params || {};
   return (
     <AssessmentTemplate
       title="Question 1"
@@ -22,4 +21,4 @@ const Home = ({route, navigation}) => {
   );
 };
 
-export default Home;
+export default Assessment;

@@ -1,6 +1,17 @@
-import React from 'react';
+/**
+ * @summary App's main Navigation component
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-14 01:21:45
+ * Last modified  : 2021-04-14 02:31:00
+ */
+
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 
+import {Spinner} from '_components/atoms';
 import {Home, Assessment} from '_screens';
 
 import {defaultOptions} from './options';
@@ -8,6 +19,17 @@ import {defaultOptions} from './options';
 const Stack = createStackNavigator();
 
 const RootNavigation = () => {
+  //const [isLoading, setLoading] = useState(true);
+  const isLoading = useSelector(state => state.appState.isLoading);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({type: 'LOADING_STATUS', value: false});
+  }, [isLoading]);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -18,7 +40,10 @@ const RootNavigation = () => {
       <Stack.Screen
         name="Assessment"
         component={Assessment}
-        options={defaultOptions()}
+        options={({route}) => {
+          const {category = ''} = route.params || {};
+          return defaultOptions(category);
+        }}
       />
     </Stack.Navigator>
   );

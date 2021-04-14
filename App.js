@@ -7,12 +7,14 @@
  */
 import 'react-native-gesture-handler';
 import React from 'react';
-import {View} from 'react-native';
 import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
+import {Provider} from 'react-redux';
+
 import RootNavigation from '_navigation';
 import {Colors} from '_assets/styles';
+import {store} from '_store';
 
 const App = () => {
   return (
@@ -20,9 +22,11 @@ const App = () => {
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.header} />
       <SafeAreaView style={styles.container}>
-        <NavigationContainer>
-          <RootNavigation />
-        </NavigationContainer>
+        <Provider store={store}>
+          <NavigationContainer>
+            <RootNavigation />
+          </NavigationContainer>
+        </Provider>
       </SafeAreaView>
     </>
   );
