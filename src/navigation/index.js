@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 01:21:45
- * Last modified  : 2021-04-14 05:14:08
+ * Last modified  : 2021-04-15 08:57:14
  */
 
 /* eslint-disable react-hooks/exhaustive-deps */
@@ -12,6 +12,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Spinner} from '_components/atoms';
+import {ReduxActions} from '_assets/constants';
 import {Home, Assessment} from '_screens';
 
 import {defaultOptions} from './options';
@@ -24,7 +25,7 @@ const RootNavigation = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch({type: 'FETCH_CATEGORY_LIST'});
+    dispatch({type: ReduxActions.FETCH_CATEGORY_LIST});
   }, [isLoading]);
 
   if (isLoading) {

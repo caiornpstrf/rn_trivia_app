@@ -1,11 +1,11 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Modal} from 'react-native';
 import {array, func, string, bool} from 'prop-types';
 
 import {Button, IfElse} from '_components/atoms';
 import {QuestionDetails, QuestionResult} from '_components/molecules';
 import {AnswersList} from '_components/organisms';
-import {Colors, ShadowStyles} from '_assets/styles';
+import {Colors} from '_assets/styles';
 
 const AssessmentTemplate = ({
   title,
@@ -16,6 +16,11 @@ const AssessmentTemplate = ({
   displayNextButton,
   nextButtonLabel,
   onPressNextButton,
+  modalVisible,
+  onRequestClose,
+  correctLabel,
+  incorrectLabel,
+  isCorrect,
 }) => {
   return (
     <View style={styles.container}>
@@ -37,6 +42,19 @@ const AssessmentTemplate = ({
           </View>
         }
       />
+      <Modal
+        animationType="fade"
+        visible={modalVisible}
+        onRequestClose={onRequestClose}
+        transparent>
+        <View style={styles.modal}>
+          <QuestionResult
+            correctLabel={correctLabel}
+            incorrectLabel={incorrectLabel}
+            isCorrect={isCorrect}
+          />
+        </View>
+      </Modal>
     </View>
   );
 };
@@ -50,6 +68,19 @@ AssessmentTemplate.propTypes = {
   displayNextButton: bool.isRequired,
   nextButtonLabel: string.isRequired,
   onPressNextButton: func.isRequired,
+  modalVisible: bool,
+  onRequestClose: func,
+  correctLabel: string,
+  incorrectLabel: string,
+  isCorrect: bool,
+};
+
+AssessmentTemplate.defaultProps = {
+  modalVisible: false,
+  onRequestClose: () => console.log('Requested Modal to close'),
+  correctLabel: '',
+  incorrectLabel: '',
+  isCorrect: false,
 };
 
 export default AssessmentTemplate;
@@ -66,6 +97,12 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.background,
     paddingHorizontal: '15%',
     paddingVertical: '5%',
+    justifyContent: 'center',
+    alignContent: 'center',
+  },
+  modal: {
+    flex: 1,
+    paddingHorizontal: '20%',
     justifyContent: 'center',
     alignContent: 'center',
   },

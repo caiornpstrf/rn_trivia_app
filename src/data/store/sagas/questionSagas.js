@@ -1,14 +1,20 @@
-import {call, put, takeLatest, take} from 'redux-saga/effects';
+import {call, put, takeLatest} from 'redux-saga/effects';
 
-import {isLoading, hasError} from 'data/store/actions/appState';
-import {setCategories, setQuestionList} from 'data/store/actions/questions';
+import {isLoading, hasError} from '_store/actions/appState';
+import {setCategories, setQuestionList} from '_store/actions/questions';
+import {ReduxActions, System} from '_assets/constants';
 
 import AsyncHandler from '_model/AsyncHandler';
 import Question from '_model/Question';
 import Category from '_model/Category';
 
-const BASE_URL = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=hard';
-const CATEGORY_URL = 'https://opentdb.com/api_category.php';
+const {BASE_URL, CATEGORY_URL} = System;
+const {
+  FETCH_CATEGORY_LIST,
+  FETCH_QUESTION_LIST,
+  RESET_QUESTION_LIST,
+} = ReduxActions;
+
 const INFO = {
   method: 'POST',
   headers: {
@@ -18,11 +24,15 @@ const INFO = {
 };
 
 export function* fetchCategoryList() {
-  yield takeLatest('FETCH_CATEGORY_LIST', callFetchDataForCategoryList);
+  yield takeLatest(FETCH_CATEGORY_LIST, callFetchDataForCategoryList);
 }
 
 export function* fetchQuestionList() {
-  yield takeLatest('FETCH_QUESTION_LIST', callFetchDataForQuestionList);
+  yield takeLatest(FETCH_QUESTION_LIST, callFetchDataForQuestionList);
+}
+
+export function* resetQuestionList() {
+  yield takeLatest(RESET_QUESTION_LIST, callResetQuestionList);
 }
 
 function* callFetchDataForCategoryList(action) {
@@ -44,32 +54,54 @@ function* callFetchDataForCategoryList(action) {
 }
 
 function parseRequestListToQuestionList(list = []) {
-  let questionList = [];
-  list.forEach(generic => {
+  return list.map(generic => {
     let question = new Question();
     question.parseRequestObjectToQuestion(generic);
-    questionList.push(question);
+    return question;
   });
+}
 
-  return questionList;
+function getNeededRequestInfoForQuestion(
+  category = 0,
+  difficulty = '',
+  amount = 0,
+  type = '',
+) {
+  const baseRequestInfo = {url: BASE_URL, requestInfo: INFO};
+  const params = {encode: 'url3986', category, difficulty, amount, type};
+  return {
+    ...baseRequestInfo,
+    params,
+  };
 }
 
 function* callFetchDataForQuestionList(action) {
   const difficulties = ['easy', 'medium', 'hard'];
-  const request_info = {
-    url: BASE_URL,
-    requestInfo: INFO,
-    params: {
-      amount: 10,
-      category: action.category.id,
-      encode: 'url3986',
-    },
-  };
+  const firstRequestInfo = getNeededRequestInfoForQuestion(
+    action.category.id,
+    'medium',
+    2,
+    'multiple',
+  );
+
+  let otherRequestInfo = getNeededRequestInfoForQuestion(
+    action.category.id,
+    null,
+    8,
+    null,
+  );
 
   let questionList = [];
+
+  // Get first two questions
+  const firstInfo = yield callFetchData(firstRequestInfo);
+  if (firstInfo && firstInfo.results) {
+    questionList = questionList.concat(firstInfo.results);
+  }
+
   for (const difficulty of difficulties) {
-    request_info.params.difficulty = difficulty;
-    const info = yield callFetchData(request_info);
+    otherRequestInfo.params.difficulty = difficulty;
+    const info = yield callFetchData(otherRequestInfo);
     if (info && info.results) {
       questionList = questionList.concat(info.results);
     }
@@ -87,4 +119,8 @@ function* callFetchData(request_info) {
   } catch (error) {
     yield put(hasError({error}));
   }
+}
+
+function* callResetQuestionList(action) {
+  yield put(setQuestionList([]));
 }

@@ -9,7 +9,7 @@ export default class Question {
   constructor(
     category = '',
     type = '',
-    difficulty = '',
+    difficulty = 'easy',
     question = '',
     correctAnswer = '',
     answers = [],

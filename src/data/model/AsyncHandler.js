@@ -5,13 +5,15 @@ class AsyncHandler {
    * @param {object} params Request parameters
    * @returns A new URL with params
    */
-  static parseParams = (params) => {
+  static parseParams = params => {
     if (!params) {
       return undefined;
     }
     const body = Object.keys(params)
       .map(k => {
-        return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+        if (params[k]) {
+          return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+        }
       })
       .join('&');
 
@@ -26,10 +28,11 @@ class AsyncHandler {
   }) => {
     try {
       const body = AsyncHandler.parseParams(params);
-      const response = await fetch(url, {...requestInfo, body});
-      return response.json();
+      const response = await fetch(`${url}?${body}`, {...requestInfo});
+      const data = await response.json();
+      return data;
     } catch (error) {
-      onError();
+      throw error;
     }
   };
 }

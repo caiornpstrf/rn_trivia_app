@@ -1,13 +1,15 @@
+import {ReduxActions} from '_assets/constants';
+
 export const setCategories = value => {
   return {
-    type: 'SET_CATEGORY_LIST',
+    type: ReduxActions.SET_CATEGORY_LIST,
     value,
   };
 };
 
 export const setQuestionList = value => {
   return {
-    type: 'SET_QUESTION_LIST',
+    type: ReduxActions.SET_QUESTION_LIST,
     value,
   };
 };

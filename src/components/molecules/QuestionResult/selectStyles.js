@@ -6,8 +6,10 @@ const sharedStyles = {
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2.5,
+    aspectRatio: 1 / 1,
   },
   text: {
+    marginTop: 15,
     color: Colors.text,
   },
 };
