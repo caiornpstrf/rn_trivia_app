@@ -1,2 +1,2 @@
-export {default as Assessment} from './Assessment';
+export {default as AssessmentScreen} from './AssessmentScreen';
 export {default as Home} from './Home';

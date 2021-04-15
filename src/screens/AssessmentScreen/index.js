@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 03:43:37
- * Last modified  : 2021-04-15 14:17:35
+ * Last modified  : 2021-04-15 16:57:56
  */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
@@ -16,21 +16,18 @@ import {
 } from '_components/templates';
 import {AssessmentStrings, ReduxActions, System} from '_assets/constants';
 
-import {AssessmentPersistence} from '_model/Assessment';
-import Question from '_model/Question';
+import Assessment, {AssessmentPersistence} from '_model/Assessment';
+import Result from '_model/Result';
 
-import {getNewDifficulty, getResultsSummary} from './helper';
-
-const Assessment = ({route, navigation}) => {
+const AssessmentScreen = ({route, navigation}) => {
   // Redux
   const questionList = useSelector(state => state.questions.questionList);
   const dispatch = useDispatch();
   // States
-  const [currentQuestion, setCurrentQuestion] = useState(new Question());
+  const [assessment, setAssessment] = useState(new Assessment());
+
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [questionNumber, setQuestionNumber] = useState(1);
-  const [currentDifficulty, setCurrentDifficulty] = useState('medium');
-
   const [showButton, setShowButton] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
@@ -44,14 +41,11 @@ const Assessment = ({route, navigation}) => {
     medium: [0, 0],
     hard: [0, 0],
   });
-
-  const [localQuestionList, setLocalQuestionList] = useState([]);
-  const [answeredQuestionList, setAnsweredQuestionList] = useState([]);
   // Navigation
   const {category = ''} = route.params || {};
   // General
   const isInvalidList = questionList.length === 0;
-  const isInvalidQuestion = currentQuestion.question === '';
+  const isInvalidQuestion = assessment.currentQuestion.question === '';
 
   // Execute once
   useEffect(() => {
@@ -63,57 +57,52 @@ const Assessment = ({route, navigation}) => {
   // Exec when questionList updates
   useEffect(() => {
     if (!isInvalidList && isInvalidQuestion) {
-      let newQuestionList = questionList;
-      setCurrentQuestion(questionList[0]);
-      newQuestionList.splice(0, 1);
-      setLocalQuestionList(newQuestionList);
+      let nextAssessment = assessment;
+      nextAssessment.currentQuestion = questionList[0];
+      nextAssessment.questionList = questionList;
+      nextAssessment.questionList.splice(0, 1);
+      setAssessment(nextAssessment);
     }
   }, [questionList]);
 
   // Procedure executed to bring the next question
   const bringNextQuestion = () => {
-    const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
-    setModalData({modalVisible: true, isCorrect});
-    let newAnsweredQuestionList = answeredQuestionList;
-    let nextDifficulty = getNewDifficulty(
-      currentDifficulty,
-      answeredQuestionList,
-      isCorrect,
+    let nextAssessment = assessment;
+    const result = new Result(
+      selectedAnswer,
+      assessment.currentQuestion.correctAnswer,
+      assessment.currentDifficulty,
     );
 
-    let newQuestionList = localQuestionList.sort(
-      (a, b) => (b.difficulty = nextDifficulty),
-    );
-    newAnsweredQuestionList.push({
-      question: currentQuestion,
-      date: new Date(),
-      isCorrect,
-    });
+    setModalData({modalVisible: true, isCorrect: result.isCorrect});
 
-    setCurrentQuestion(newQuestionList[0]);
-    newQuestionList.splice(0, 1);
-    setAnsweredQuestionList(newAnsweredQuestionList);
-    setLocalQuestionList(newQuestionList);
+    let nextDifficulty = nextAssessment.getNewDifficulty(result.isCorrect);
+
+    nextAssessment.resultList.push(result);
+    nextAssessment.prepareNextQuestion(nextDifficulty);
+
     setSelectedAnswer('');
     setShowButton(false);
     setQuestionNumber(questionNumber + 1);
-    setCurrentDifficulty(nextDifficulty);
+    setAssessment(nextAssessment);
 
-    console.log(isCorrect, 'next: ' + nextDifficulty);
+    console.log(result.isCorrect, 'next: ' + nextDifficulty);
   };
 
   const concludeAssessment = () => {
-    const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
-    let newAnsweredQuestionList = answeredQuestionList;
-    newAnsweredQuestionList.push({
-      question: currentQuestion,
-      date: new Date(),
-      isCorrect,
-    });
+    let nextAssessment = assessment;
+    nextAssessment.resultList.push(
+      new Result(
+        selectedAnswer,
+        assessment.currentQuestion.correctAnswer,
+        assessment.currentDifficulty,
+      ),
+    );
 
-    const results = getResultsSummary(newAnsweredQuestionList);
+    const results = nextAssessment.getResultsSummary();
     setResultsData(results);
     setShowResults(true);
+    setAssessment(nextAssessment);
   };
 
   const saveAndGoBack = () => {
@@ -138,9 +127,9 @@ const Assessment = ({route, navigation}) => {
     return (
       <AssessmentTemplate
         title={questionLabel.replace('{0}', questionNumber)}
-        question={currentQuestion.question}
-        answers={currentQuestion.answers}
-        difficulty={currentQuestion.difficulty}
+        question={assessment.currentQuestion.question}
+        answers={assessment.currentQuestion.answers}
+        difficulty={assessment.currentQuestion.difficulty}
         onItemSelected={({item, index}) => {
           setSelectedAnswer(item);
           setShowButton(true);
@@ -176,4 +165,4 @@ const Assessment = ({route, navigation}) => {
   }
 };
 
-export default Assessment;
+export default AssessmentScreen;

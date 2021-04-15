@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 01:21:45
- * Last modified  : 2021-04-15 08:57:14
+ * Last modified  : 2021-04-15 15:39:58
  */
 
 /* eslint-disable react-hooks/exhaustive-deps */
@@ -13,7 +13,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {Spinner} from '_components/atoms';
 import {ReduxActions} from '_assets/constants';
-import {Home, Assessment} from '_screens';
+import {Home, AssessmentScreen} from '_screens';
 
 import {defaultOptions} from './options';
 
@@ -40,7 +40,7 @@ const RootNavigation = () => {
       />
       <Stack.Screen
         name="Assessment"
-        component={Assessment}
+        component={AssessmentScreen}
         options={({route}) => {
           const {category = ''} = route.params || {};
           return defaultOptions(category.name);
