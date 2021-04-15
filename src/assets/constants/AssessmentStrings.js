@@ -4,4 +4,11 @@ export default {
   incorrectAnswer: 'Try again :(',
   nextQuestionBtn: 'Next',
   finishBtn: 'Finish',
+  result: 'Overall performance: {0} of {1} correct answers',
+  resultDetails: {
+    title: 'Details:',
+    easy: '• Easy: {0} of {1}',
+    medium: '• Medium: {0} of {1}',
+    hard: '• Hard: {0} of {1}',
+  },
 };

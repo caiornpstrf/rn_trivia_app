@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 03:43:37
- * Last modified  : 2021-04-15 09:07:04
+ * Last modified  : 2021-04-15 11:06:57
  */
 
 /* eslint-disable react-hooks/exhaustive-deps */
@@ -11,7 +11,10 @@ import React, {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {Spinner} from 'components/atoms';
-import {AssessmentTemplate} from '_components/templates';
+import {
+  AssessmentTemplate,
+  AssessmentResultTemplate,
+} from '_components/templates';
 import {AssessmentStrings, ReduxActions} from '_assets/constants';
 
 import Question from '_model/Question';
@@ -63,6 +66,10 @@ const Assessment = ({route, navigation}) => {
   // States
   const [currentQuestion, setCurrentQuestion] = useState(new Question());
   const [showButton, setShowButton] = useState(false);
+  const [modalData, setModalData] = useState({
+    modalVisible: false,
+    isCorrect: false,
+  });
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [localQuestionList, setLocalQuestionList] = useState([]);
   const [answeredQuestionList, setAnsweredQuestionList] = useState([]);
@@ -94,6 +101,7 @@ const Assessment = ({route, navigation}) => {
   // Procedure executed to bring the next question
   const bringNextQuestion = () => {
     const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
+    setModalData({modalVisible: true, isCorrect});
     let newAnsweredQuestionList = answeredQuestionList;
     let nextDifficulty = getNewDifficulty(
       currentDifficulty,
@@ -146,32 +154,38 @@ const Assessment = ({route, navigation}) => {
   if (isInvalidList || isInvalidQuestion) {
     return <Spinner />;
   }
-  return (
-    <AssessmentTemplate
-      title={questionLabel.replace('{0}', questionNumber)}
-      question={currentQuestion.question}
-      answers={currentQuestion.answers}
-      difficulty={currentQuestion.difficulty}
-      onItemSelected={({item, index}) => {
-        setSelectedAnswer(item);
-        setShowButton(true);
-      }}
-      displayNextButton={showButton}
-      nextButtonLabel={
-        questionNumber !== MAX_NUMBER_OF_QUESTIONS ? nextQuestionBtn : finishBtn
-      }
-      onPressNextButton={
-        questionNumber !== MAX_NUMBER_OF_QUESTIONS
-          ? bringNextQuestion
-          : concludeAssessment
-      }
-      modalVisible={true}
-      onRequestClose={() => {}}
-      correctLabel={correctAnswer}
-      incorrectLabel={incorrectAnswer}
-      isCorrect={true}
-    />
-  );
+  if (false) {
+    return (
+      <AssessmentTemplate
+        title={questionLabel.replace('{0}', questionNumber)}
+        question={currentQuestion.question}
+        answers={currentQuestion.answers}
+        difficulty={currentQuestion.difficulty}
+        onItemSelected={({item, index}) => {
+          setSelectedAnswer(item);
+          setShowButton(true);
+        }}
+        displayNextButton={showButton}
+        nextButtonLabel={
+          questionNumber !== MAX_NUMBER_OF_QUESTIONS ? nextQuestionBtn : finishBtn
+        }
+        onPressNextButton={
+          questionNumber !== MAX_NUMBER_OF_QUESTIONS
+            ? bringNextQuestion
+            : concludeAssessment
+        }
+        modalVisible={modalData.modalVisible}
+        onRequestClose={() =>
+          setModalData({modalVisible: false, isCorrect: false})
+        }
+        correctLabel={correctAnswer}
+        incorrectLabel={incorrectAnswer}
+        isCorrect={modalData.isCorrect}
+      />
+    );
+  } else {
+    return <AssessmentResultTemplate />
+  }
 };
 
 export default Assessment;

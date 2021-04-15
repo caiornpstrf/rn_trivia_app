@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Modal} from 'react-native';
+import {StyleSheet, View, Modal, Pressable} from 'react-native';
 import {array, func, string, bool} from 'prop-types';
 
 import {Button, IfElse} from '_components/atoms';
@@ -47,13 +47,13 @@ const AssessmentTemplate = ({
         visible={modalVisible}
         onRequestClose={onRequestClose}
         transparent>
-        <View style={styles.modal}>
+        <Pressable style={styles.modal} onPress={onRequestClose}>
           <QuestionResult
             correctLabel={correctLabel}
             incorrectLabel={incorrectLabel}
             isCorrect={isCorrect}
           />
-        </View>
+        </Pressable>
       </Modal>
     </View>
   );
