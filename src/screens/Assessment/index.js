@@ -3,9 +3,8 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 03:43:37
- * Last modified  : 2021-04-15 11:06:57
+ * Last modified  : 2021-04-15 12:56:39
  */
-
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
@@ -19,45 +18,9 @@ import {AssessmentStrings, ReduxActions} from '_assets/constants';
 
 import Question from '_model/Question';
 
-const MAX_NUMBER_OF_QUESTIONS = 10;
-const DIFFICULTY_MAPPING = {
-  easy: 0,
-  medium: 1,
-  hard: 2,
-};
+import {getNewDifficulty, getResultsSummary} from './helper';
 
-const tryToChangeDifficulty = (current = '', factor = 0) => {
-  const nextDifficulty = DIFFICULTY_MAPPING[current] + factor;
-  if (nextDifficulty === -1 || nextDifficulty === 3) {
-    return current;
-  }
-  return Object.keys(DIFFICULTY_MAPPING)[nextDifficulty];
-};
-
-/**
- * Calculates the next difficulty based on previous perfomance
- * @param {String} currentDifficulty Current question difficulty
- * @param {Array} answeredQuestionList List of past results
- * @param {Boolean} isCorrect Current question result
- * @returns
- */
-const getNewDifficulty = (
-  currentDifficulty = '',
-  answeredQuestionList = [],
-  isCorrect = false,
-) => {
-  const completionLength = answeredQuestionList.length;
-  let nextDifficulty = currentDifficulty;
-  if (completionLength > 0) {
-    if (isCorrect === answeredQuestionList[completionLength - 1].isCorrect) {
-      nextDifficulty = tryToChangeDifficulty(
-        currentDifficulty,
-        isCorrect ? 1 : -1,
-      );
-    }
-  }
-  return nextDifficulty;
-};
+const MAX_NUMBER_OF_QUESTIONS = 4;
 
 const Assessment = ({route, navigation}) => {
   // Redux
@@ -65,16 +28,26 @@ const Assessment = ({route, navigation}) => {
   const dispatch = useDispatch();
   // States
   const [currentQuestion, setCurrentQuestion] = useState(new Question());
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [questionNumber, setQuestionNumber] = useState(1);
+  const [currentDifficulty, setCurrentDifficulty] = useState('medium');
+
   const [showButton, setShowButton] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+
   const [modalData, setModalData] = useState({
     modalVisible: false,
     isCorrect: false,
   });
-  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [resultsData, setResultsData] = useState({
+    summary: [0, 0],
+    easy: [0, 0],
+    medium: [0, 0],
+    hard: [0, 0],
+  });
+
   const [localQuestionList, setLocalQuestionList] = useState([]);
   const [answeredQuestionList, setAnsweredQuestionList] = useState([]);
-  const [questionNumber, setQuestionNumber] = useState(1);
-  const [currentDifficulty, setCurrentDifficulty] = useState('medium');
   // Navigation
   const {category = ''} = route.params || {};
   // General
@@ -139,7 +112,13 @@ const Assessment = ({route, navigation}) => {
       isCorrect,
     });
 
-    console.warn('YOU DID IT!');
+    const results = getResultsSummary(newAnsweredQuestionList);
+    setResultsData(results);
+    setShowResults(true);
+  };
+
+  const saveAndGoBack = () => {
+    navigation.goBack();
   };
 
   // Destructure strings
@@ -154,7 +133,7 @@ const Assessment = ({route, navigation}) => {
   if (isInvalidList || isInvalidQuestion) {
     return <Spinner />;
   }
-  if (false) {
+  if (!showResults) {
     return (
       <AssessmentTemplate
         title={questionLabel.replace('{0}', questionNumber)}
@@ -167,7 +146,9 @@ const Assessment = ({route, navigation}) => {
         }}
         displayNextButton={showButton}
         nextButtonLabel={
-          questionNumber !== MAX_NUMBER_OF_QUESTIONS ? nextQuestionBtn : finishBtn
+          questionNumber !== MAX_NUMBER_OF_QUESTIONS
+            ? nextQuestionBtn
+            : finishBtn
         }
         onPressNextButton={
           questionNumber !== MAX_NUMBER_OF_QUESTIONS
@@ -184,7 +165,13 @@ const Assessment = ({route, navigation}) => {
       />
     );
   } else {
-    return <AssessmentResultTemplate />
+    return (
+      <AssessmentResultTemplate
+        onPress={saveAndGoBack}
+        buttonLabel={finishBtn}
+        resultsMapping={resultsData}
+      />
+    );
   }
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 import {Button, Title, Description} from '_components/atoms';
 import {Colors} from '_assets/styles';
@@ -8,12 +8,12 @@ import {string} from 'prop-types';
 import {func} from 'prop-types';
 import {object} from 'prop-types';
 
-const placeListOfVariablesOnString = (string = '', list = []) => {
-  let newString = string;
+const placeListOfVariablesOnString = (label = '', list = []) => {
+  let newLabel = label;
   for (let i = 0; i < list.length; i++) {
-    newString = newString.replace(`{${i}}`, list[i]);
+    newLabel = newLabel.replace(`{${i}}`, list[i]);
   }
-  return newString;
+  return newLabel;
 };
 
 const AssessmentResultTemplate = ({buttonLabel, onPress, resultsMapping}) => {
