@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 03:43:37
- * Last modified  : 2021-04-15 12:56:39
+ * Last modified  : 2021-04-15 14:17:35
  */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
@@ -14,13 +14,12 @@ import {
   AssessmentTemplate,
   AssessmentResultTemplate,
 } from '_components/templates';
-import {AssessmentStrings, ReduxActions} from '_assets/constants';
+import {AssessmentStrings, ReduxActions, System} from '_assets/constants';
 
+import {AssessmentPersistence} from '_model/Assessment';
 import Question from '_model/Question';
 
 import {getNewDifficulty, getResultsSummary} from './helper';
-
-const MAX_NUMBER_OF_QUESTIONS = 4;
 
 const Assessment = ({route, navigation}) => {
   // Redux
@@ -118,6 +117,7 @@ const Assessment = ({route, navigation}) => {
   };
 
   const saveAndGoBack = () => {
+    AssessmentPersistence.storeData(resultsData, category);
     navigation.goBack();
   };
 
@@ -128,6 +128,7 @@ const Assessment = ({route, navigation}) => {
     nextQuestionBtn,
     finishBtn,
     questionLabel,
+    goBackBtn,
   } = AssessmentStrings;
 
   if (isInvalidList || isInvalidQuestion) {
@@ -146,12 +147,12 @@ const Assessment = ({route, navigation}) => {
         }}
         displayNextButton={showButton}
         nextButtonLabel={
-          questionNumber !== MAX_NUMBER_OF_QUESTIONS
+          questionNumber !== System.MAX_NUMBER_OF_QUESTIONS
             ? nextQuestionBtn
             : finishBtn
         }
         onPressNextButton={
-          questionNumber !== MAX_NUMBER_OF_QUESTIONS
+          questionNumber !== System.MAX_NUMBER_OF_QUESTIONS
             ? bringNextQuestion
             : concludeAssessment
         }
@@ -168,7 +169,7 @@ const Assessment = ({route, navigation}) => {
     return (
       <AssessmentResultTemplate
         onPress={saveAndGoBack}
-        buttonLabel={finishBtn}
+        buttonLabel={goBackBtn}
         resultsMapping={resultsData}
       />
     );

@@ -4,6 +4,7 @@ export default {
   incorrectAnswer: 'Try again :(',
   nextQuestionBtn: 'Next',
   finishBtn: 'Finish',
+  goBackBtn: 'Go Back',
   result: 'Overall performance: {0} of {1} correct answers',
   resultDetails: {
     title: 'Details:',
