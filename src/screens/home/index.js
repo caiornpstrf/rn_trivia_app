@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 02:52:26
- * Last modified  : 2021-04-15 08:53:49
+ * Last modified  : 2021-04-16 02:02:47
  */
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
@@ -12,8 +12,11 @@ import {useFocusEffect} from '@react-navigation/native';
 import {HomeTemplate} from '_components/templates';
 import {ReduxActions} from '_assets/constants';
 
-const onItemSelected = (category, index, navigation) => {
-  navigation.navigate('Assessment', {category: category});
+import {AssessmentPersistence} from '_model/Assessment';
+
+const onItemSelected = async (category, index, navigation) => {
+  const savedResults = await AssessmentPersistence.retrieveData(category.id);
+  navigation.navigate('Assessment', {category, savedResults});
 };
 
 const Home = ({navigation}) => {

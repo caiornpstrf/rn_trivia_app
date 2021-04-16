@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 03:43:37
- * Last modified  : 2021-04-15 16:57:56
+ * Last modified  : 2021-04-16 02:13:44
  */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
@@ -19,33 +19,37 @@ import {AssessmentStrings, ReduxActions, System} from '_assets/constants';
 import Assessment, {AssessmentPersistence} from '_model/Assessment';
 import Result from '_model/Result';
 
+const defaultResultData = {
+  summary: [0, 0],
+  easy: [0, 0],
+  medium: [0, 0],
+  hard: [0, 0],
+};
+
 const AssessmentScreen = ({route, navigation}) => {
   // Redux
   const questionList = useSelector(state => state.questions.questionList);
   const dispatch = useDispatch();
+  // Navigation
+  const {category = '', savedResults = null} = route.params || {};
+  // General
+  const isInvalidList = questionList.length === 0;
   // States
   const [assessment, setAssessment] = useState(new Assessment());
 
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [questionNumber, setQuestionNumber] = useState(1);
+  const [isDoneLoading, setDoneLoading] = useState(false);
   const [showButton, setShowButton] = useState(false);
-  const [showResults, setShowResults] = useState(false);
+  const [showResults, setShowResults] = useState(savedResults ? true : false);
 
   const [modalData, setModalData] = useState({
     modalVisible: false,
     isCorrect: false,
   });
-  const [resultsData, setResultsData] = useState({
-    summary: [0, 0],
-    easy: [0, 0],
-    medium: [0, 0],
-    hard: [0, 0],
-  });
-  // Navigation
-  const {category = ''} = route.params || {};
-  // General
-  const isInvalidList = questionList.length === 0;
-  const isInvalidQuestion = assessment.currentQuestion.question === '';
+  const [resultsData, setResultsData] = useState(
+    savedResults ? savedResults.summary : defaultResultData,
+  );
 
   // Execute once
   useEffect(() => {
@@ -56,14 +60,24 @@ const AssessmentScreen = ({route, navigation}) => {
 
   // Exec when questionList updates
   useEffect(() => {
-    if (!isInvalidList && isInvalidQuestion) {
+    if (!isInvalidList && !isDoneLoading) {
       let nextAssessment = assessment;
       nextAssessment.currentQuestion = questionList[0];
       nextAssessment.questionList = questionList;
       nextAssessment.questionList.splice(0, 1);
       setAssessment(nextAssessment);
+      setDoneLoading(true);
     }
   }, [questionList]);
+
+  const displayCurrentResult = () => {
+    const result = new Result(
+      selectedAnswer,
+      assessment.currentQuestion.correctAnswer,
+      assessment.currentDifficulty,
+    );
+    setModalData({modalVisible: true, isCorrect: result.isCorrect});
+  };
 
   // Procedure executed to bring the next question
   const bringNextQuestion = () => {
@@ -74,13 +88,12 @@ const AssessmentScreen = ({route, navigation}) => {
       assessment.currentDifficulty,
     );
 
-    setModalData({modalVisible: true, isCorrect: result.isCorrect});
-
     let nextDifficulty = nextAssessment.getNewDifficulty(result.isCorrect);
 
     nextAssessment.resultList.push(result);
     nextAssessment.prepareNextQuestion(nextDifficulty);
 
+    setModalData({modalVisible: false, isCorrect: false});
     setSelectedAnswer('');
     setShowButton(false);
     setQuestionNumber(questionNumber + 1);
@@ -91,22 +104,28 @@ const AssessmentScreen = ({route, navigation}) => {
 
   const concludeAssessment = () => {
     let nextAssessment = assessment;
-    nextAssessment.resultList.push(
-      new Result(
-        selectedAnswer,
-        assessment.currentQuestion.correctAnswer,
-        assessment.currentDifficulty,
-      ),
+    const result = new Result(
+      selectedAnswer,
+      assessment.currentQuestion.correctAnswer,
+      assessment.currentDifficulty,
     );
 
+    nextAssessment.resultList.push(result);
     const results = nextAssessment.getResultsSummary();
+
+    setModalData({modalVisible: false, isCorrect: false});
     setResultsData(results);
     setShowResults(true);
     setAssessment(nextAssessment);
   };
 
   const saveAndGoBack = () => {
-    AssessmentPersistence.storeData(resultsData, category);
+    if (!savedResults) {
+      AssessmentPersistence.storeData(category.id, {
+        summary: resultsData,
+        resultList: assessment.resultList,
+      });
+    }
     navigation.goBack();
   };
 
@@ -120,10 +139,9 @@ const AssessmentScreen = ({route, navigation}) => {
     goBackBtn,
   } = AssessmentStrings;
 
-  if (isInvalidList || isInvalidQuestion) {
+  if (!isDoneLoading) {
     return <Spinner />;
-  }
-  if (!showResults) {
+  } else if (!showResults) {
     return (
       <AssessmentTemplate
         title={questionLabel.replace('{0}', questionNumber)}
@@ -140,14 +158,12 @@ const AssessmentScreen = ({route, navigation}) => {
             ? nextQuestionBtn
             : finishBtn
         }
-        onPressNextButton={
+        onPressNextButton={displayCurrentResult}
+        modalVisible={modalData.modalVisible}
+        onRequestClose={
           questionNumber !== System.MAX_NUMBER_OF_QUESTIONS
             ? bringNextQuestion
             : concludeAssessment
-        }
-        modalVisible={modalData.modalVisible}
-        onRequestClose={() =>
-          setModalData({modalVisible: false, isCorrect: false})
         }
         correctLabel={correctAnswer}
         incorrectLabel={incorrectAnswer}
