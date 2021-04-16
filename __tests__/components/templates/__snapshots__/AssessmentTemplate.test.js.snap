@@ -1,0 +1,3041 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#343D58",
+              "fontWeight": "bold",
+            },
+            Object {
+              "flex": 1,
+            },
+            Object {
+              "fontSize": 35,
+            },
+          ]
+        }
+      >
+        Question Title
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D6D8DE",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#343D58",
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          easy
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#171717",
+          "fontSize": 28,
+        }
+      }
+    >
+      Is this a test question?
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 0
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 1
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 2
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[MockFunction]}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignContent": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": "20%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "elevation": 4,
+              "paddingHorizontal": 15,
+              "paddingVertical": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            },
+            Object {
+              "alignItems": "center",
+              "aspectRatio": 1,
+              "borderColor": "#FF6660",
+              "borderWidth": 2.5,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF6660",
+                "fontSize": 117,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#343D58",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "#171717",
+                "marginTop": 15,
+              },
+              Object {
+                "fontSize": 35,
+              },
+            ]
+          }
+        >
+          Incorrect test
+        </Text>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`renders hard question correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#343D58",
+              "fontWeight": "bold",
+            },
+            Object {
+              "flex": 1,
+            },
+            Object {
+              "fontSize": 35,
+            },
+          ]
+        }
+      >
+        Question Title
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D6D8DE",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#343D58",
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          hard
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#171717",
+          "fontSize": 28,
+        }
+      }
+    >
+      Is this a test question?
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 0
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 1
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 2
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[MockFunction]}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignContent": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": "20%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "elevation": 4,
+              "paddingHorizontal": 15,
+              "paddingVertical": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            },
+            Object {
+              "alignItems": "center",
+              "aspectRatio": 1,
+              "borderColor": "#FF6660",
+              "borderWidth": 2.5,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF6660",
+                "fontSize": 117,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#343D58",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "#171717",
+                "marginTop": 15,
+              },
+              Object {
+                "fontSize": 35,
+              },
+            ]
+          }
+        >
+          Incorrect test
+        </Text>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`renders medium question correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#343D58",
+              "fontWeight": "bold",
+            },
+            Object {
+              "flex": 1,
+            },
+            Object {
+              "fontSize": 35,
+            },
+          ]
+        }
+      >
+        Question Title
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D6D8DE",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#343D58",
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          medium
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#171717",
+          "fontSize": 28,
+        }
+      }
+    >
+      Is this a test question?
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 0
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 1
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 2
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[MockFunction]}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignContent": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": "20%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "elevation": 4,
+              "paddingHorizontal": 15,
+              "paddingVertical": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            },
+            Object {
+              "alignItems": "center",
+              "aspectRatio": 1,
+              "borderColor": "#FF6660",
+              "borderWidth": 2.5,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF6660",
+                "fontSize": 117,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#343D58",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "#171717",
+                "marginTop": 15,
+              },
+              Object {
+                "fontSize": 35,
+              },
+            ]
+          }
+        >
+          Incorrect test
+        </Text>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`renders with button correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#343D58",
+              "fontWeight": "bold",
+            },
+            Object {
+              "flex": 1,
+            },
+            Object {
+              "fontSize": 35,
+            },
+          ]
+        }
+      >
+        Question Title
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D6D8DE",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#343D58",
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          easy
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#171717",
+          "fontSize": 28,
+        }
+      }
+    >
+      Is this a test question?
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 0
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 1
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 2
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "backgroundColor": "#FFFFFF",
+        "justifyContent": "center",
+        "paddingHorizontal": "15%",
+        "paddingVertical": "5%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#4D8AF0",
+            "borderRadius": 10,
+            "elevation": 4,
+            "height": 45,
+            "justifyContent": "center",
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.23,
+            "shadowRadius": 2.62,
+          },
+          undefined,
+          false,
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 33,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Submit
+      </Text>
+    </View>
+  </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[MockFunction]}
+    transparent={true}
+    visible={false}
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignContent": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": "20%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "elevation": 4,
+              "paddingHorizontal": 15,
+              "paddingVertical": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            },
+            Object {
+              "alignItems": "center",
+              "aspectRatio": 1,
+              "borderColor": "#FF6660",
+              "borderWidth": 2.5,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF6660",
+                "fontSize": 117,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#343D58",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "#171717",
+                "marginTop": 15,
+              },
+              Object {
+                "fontSize": 35,
+              },
+            ]
+          }
+        >
+          Incorrect test
+        </Text>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`renders with correct answer modal correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#343D58",
+              "fontWeight": "bold",
+            },
+            Object {
+              "flex": 1,
+            },
+            Object {
+              "fontSize": 35,
+            },
+          ]
+        }
+      >
+        Question Title
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D6D8DE",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#343D58",
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          easy
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#171717",
+          "fontSize": 28,
+        }
+      }
+    >
+      Is this a test question?
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 0
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 1
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 2
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[MockFunction]}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignContent": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": "20%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "elevation": 4,
+              "paddingHorizontal": 15,
+              "paddingVertical": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            },
+            Object {
+              "alignItems": "center",
+              "aspectRatio": 1,
+              "borderColor": "#32CB82",
+              "borderWidth": 2.5,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#32CB82",
+                "fontSize": 117,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#343D58",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "#171717",
+                "marginTop": 15,
+              },
+              Object {
+                "fontSize": 35,
+              },
+            ]
+          }
+        >
+          Correct test
+        </Text>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`renders with incorrect answer modal correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#343D58",
+              "fontWeight": "bold",
+            },
+            Object {
+              "flex": 1,
+            },
+            Object {
+              "fontSize": 35,
+            },
+          ]
+        }
+      >
+        Question Title
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#D6D8DE",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343D58",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#B0B0B0",
+                  "fontSize": 12,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#343D58",
+              "textTransform": "capitalize",
+            }
+          }
+        >
+          easy
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#171717",
+          "fontSize": 28,
+        }
+      }
+    >
+      Is this a test question?
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 0
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 1
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 2
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 10,
+                "elevation": 4,
+                "paddingHorizontal": 15,
+                "paddingVertical": 20,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.23,
+                "shadowRadius": 2.62,
+              },
+              Array [
+                Object {
+                  "marginBottom": 20,
+                },
+                false,
+              ],
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#171717",
+                "fontSize": 28,
+              }
+            }
+          >
+            Answer 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[MockFunction]}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignContent": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": "20%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "elevation": 4,
+              "paddingHorizontal": 15,
+              "paddingVertical": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.23,
+              "shadowRadius": 2.62,
+            },
+            Object {
+              "alignItems": "center",
+              "aspectRatio": 1,
+              "borderColor": "#FF6660",
+              "borderWidth": 2.5,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF6660",
+                "fontSize": 117,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#343D58",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "#171717",
+                "marginTop": 15,
+              },
+              Object {
+                "fontSize": 35,
+              },
+            ]
+          }
+        >
+          Incorrect test
+        </Text>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;

@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-16 03:46:18
- * Last modified  : 2021-04-16 03:47:37
+ * Last modified  : 2021-04-16 09:39:37
  */
 
 import React from 'react';
@@ -76,19 +76,11 @@ AssessmentTemplate.propTypes = {
   displayNextButton: bool.isRequired,
   nextButtonLabel: string.isRequired,
   onPressNextButton: func.isRequired,
-  modalVisible: bool,
-  onRequestClose: func,
-  correctLabel: string,
-  incorrectLabel: string,
-  isCorrect: bool,
-};
-
-AssessmentTemplate.defaultProps = {
-  modalVisible: false,
-  onRequestClose: () => console.log('Requested Modal to close'),
-  correctLabel: '',
-  incorrectLabel: '',
-  isCorrect: false,
+  modalVisible: bool.isRequired,
+  onRequestClose: func.isRequired,
+  correctLabel: string.isRequired,
+  incorrectLabel: string.isRequired,
+  isCorrect: bool.isRequired,
 };
 
 export default AssessmentTemplate;

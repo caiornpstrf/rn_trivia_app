@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-16 03:45:13
- * Last modified  : 2021-04-16 03:46:11
+ * Last modified  : 2021-04-16 09:38:49
  */
 
 import React from 'react';
@@ -58,15 +58,9 @@ const AssessmentResultTemplate = ({buttonLabel, onPress, resultsMapping}) => {
 };
 
 AssessmentResultTemplate.propTypes = {
-  buttonLabel: string,
-  onPress: func,
-  resultsMapping: object,
-};
-
-AssessmentResultTemplate.defaultProps = {
-  buttonLabel: '',
-  onPress: () => console.log('Pressed AssessmentResultTemplate button'),
-  resultsMapping: {summary: [0, 0], easy: [0, 0], medium: [0, 0], hard: [0, 0]},
+  buttonLabel: string.isRequired,
+  onPress: func.isRequired,
+  resultsMapping: object.isRequired,
 };
 
 export default AssessmentResultTemplate;
