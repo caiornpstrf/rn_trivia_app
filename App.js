@@ -14,15 +14,16 @@ import {Provider} from 'react-redux';
 
 import RootNavigation from '_navigation';
 import {Colors} from '_assets/styles';
-import {store} from '_store';
+import Store from '_store';
 
 const App = () => {
+  const store = new Store();
   return (
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.header} />
       <SafeAreaView style={styles.container}>
-        <Provider store={store}>
+        <Provider store={store.buildStore()}>
           <NavigationContainer>
             <RootNavigation />
           </NavigationContainer>

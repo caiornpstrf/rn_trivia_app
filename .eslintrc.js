@@ -12,6 +12,7 @@ module.exports = {
           ['_model', './src/data/model'],
           ['_navigation', './src/navigation'],
           ['_screens', './src/screens'],
+          ['_testUtils', './test-utils'],
         ],
       },
     },

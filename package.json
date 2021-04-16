@@ -47,10 +47,11 @@
   "jest": {
     "preset": "react-native",
     "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
+      "@testing-library/jest-native/extend-expect",
+      "./jest.setup.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(@react-native|react-native|react-native-vector-icons)/)"
+      "node_modules/(?!(@react-native|react-native|react-native-vector-icons|react-native-iphone-x-helper|@react-navigation/stack)/)"
     ]
   }
 }

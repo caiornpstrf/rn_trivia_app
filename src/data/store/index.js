@@ -7,14 +7,21 @@ import {System} from '_assets/constants';
 import rootReducer from './reducers/index';
 import {rootSaga} from './sagas/index';
 
-const sagaMiddleware = createSagaMiddleware();
+export default class Store {
+  initialState = null;
 
-const chosenMiddleware = System.ENABLE_REDUX_LOGGING
-  ? applyMiddleware(sagaMiddleware, createLogger())
-  : applyMiddleware(sagaMiddleware);
+  buildStore = () => {
+    const sagaMiddleware = createSagaMiddleware();
+    const chosenMiddleware = System.ENABLE_REDUX_LOGGING
+      ? applyMiddleware(sagaMiddleware, createLogger())
+      : applyMiddleware(sagaMiddleware);
 
-const store = createStore(rootReducer, chosenMiddleware);
+    const store = this.initialState
+      ? createStore(rootReducer, this.initialState, chosenMiddleware)
+      : createStore(rootReducer, chosenMiddleware);
 
-sagaMiddleware.run(rootSaga);
+    sagaMiddleware.run(rootSaga);
 
-export {store};
+    return store;
+  };
+}
