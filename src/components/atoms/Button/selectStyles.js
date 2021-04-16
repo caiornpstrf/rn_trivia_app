@@ -1,3 +1,11 @@
+/**
+ * @summary Dynamic styles for Button
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:33:13
+ * Last modified  : 2021-04-16 03:33:37
+ */
+
 import {StyleSheet} from 'react-native';
 import {Colors, ShadowStyles, StyleHelpers} from '_assets/styles';
 

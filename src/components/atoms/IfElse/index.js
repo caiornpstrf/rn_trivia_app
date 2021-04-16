@@ -1,9 +1,10 @@
+/* eslint-disable react-native/no-inline-styles */
 /**
- * @summary Simple loop component to render multiple children
+ * @summary Components that renders other components conditionally
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-12 03:10:37
- * Last modified  : 2021-04-14 07:27:59
+ * Last modified  : 2021-04-16 03:38:29
  */
 import React from 'react';
 import {View} from 'react-native';
@@ -23,7 +24,7 @@ IfElse.propTypes = {
 };
 
 IfElse.defaultProps = {
-  // eslint-disable-next-line react-native/no-inline-styles
+  // An invisible View to prevent the component from rendering 'undefined' in case we don't want to render onFalse
   onFalse: <View style={{display: 'none'}} />,
 };
 

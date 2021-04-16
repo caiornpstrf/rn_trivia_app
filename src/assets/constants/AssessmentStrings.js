@@ -1,3 +1,10 @@
+/**
+ * @summary Strings related to Assessment
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:30:28
+ * Last modified  : 2021-04-16 03:30:57
+ */
 export default {
   questionLabel: 'Question {0}',
   correctAnswer: 'You got it!',

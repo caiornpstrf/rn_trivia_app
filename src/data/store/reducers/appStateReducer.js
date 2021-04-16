@@ -1,3 +1,11 @@
+/**
+ * @summary
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:51:18
+ * Last modified  : 2021-04-16 03:51:34
+ */
+
 import {ReduxActions} from '_assets/constants';
 
 const initialState = {

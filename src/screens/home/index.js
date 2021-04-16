@@ -3,8 +3,9 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 02:52:26
- * Last modified  : 2021-04-16 02:02:47
+ * Last modified  : 2021-04-16 03:53:25
  */
+
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {useFocusEffect} from '@react-navigation/native';

@@ -1,3 +1,11 @@
+/**
+ * @summary Dynamic styles for QuestionResult
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:42:28
+ * Last modified  : 2021-04-16 03:42:28
+ */
+
 import {StyleSheet} from 'react-native';
 import {Colors} from '_assets/styles';
 

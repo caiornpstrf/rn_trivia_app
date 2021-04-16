@@ -1,3 +1,11 @@
+/**
+ * @summary Standardized ActivityIndicator
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:38:42
+ * Last modified  : 2021-04-16 03:39:10
+ */
+
 import React from 'react';
 import {StyleSheet, ActivityIndicator, View} from 'react-native';
 

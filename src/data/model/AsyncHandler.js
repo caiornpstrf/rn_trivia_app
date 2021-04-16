@@ -1,3 +1,11 @@
+/**
+ * @summary Handles request calls
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:49:09
+ * Last modified  : 2021-04-16 03:49:27
+ */
+
 class AsyncHandler {
   /**
    * Parse params to a string and joins to the URL

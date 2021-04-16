@@ -1,3 +1,11 @@
+/**
+ * @summary Handles persistency of Assessment data
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:48:51
+ * Last modified  : 2021-04-16 03:48:51
+ */
+
 import AsyncStorage from '@react-native-community/async-storage';
 import {StorageKeys} from '_assets/constants';
 

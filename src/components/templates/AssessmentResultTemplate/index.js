@@ -1,3 +1,11 @@
+/**
+ * @summary Summary of the result of an Assessment
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:45:13
+ * Last modified  : 2021-04-16 03:46:11
+ */
+
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 

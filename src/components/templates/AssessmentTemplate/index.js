@@ -1,3 +1,11 @@
+/**
+ * @summary Displays every info of a Question, allows for answer selection & displays the result
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:46:18
+ * Last modified  : 2021-04-16 03:47:37
+ */
+
 import React from 'react';
 import {StyleSheet, View, Modal, Pressable} from 'react-native';
 import {array, func, string, bool} from 'prop-types';

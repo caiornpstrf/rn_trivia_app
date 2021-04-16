@@ -3,7 +3,7 @@
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-12 02:59:55
- * Last modified  : 2021-04-12 05:27:15
+ * Last modified  : 2021-04-16 03:35:41
  */
 
 import React from 'react';
@@ -16,15 +16,13 @@ const CustomIcon = ({name, size, color, ...rest}) => {
 };
 
 CustomIcon.propTypes = {
-  name: string,
+  name: string.isRequired,
   size: number,
-  color: string,
+  color: string.isRequired,
 };
 
 CustomIcon.defaultProps = {
-  name: 'star',
   size: 12,
-  color: '#000',
 };
 
 export default CustomIcon;

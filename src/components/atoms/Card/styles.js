@@ -1,9 +1,9 @@
 /**
- * @summary Generic Card with built-in shadow.
+ * @summary Fixed styles for Card.
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
- * Created at     : 2021-04-12 06:37:03 
- * Last modified  : 2021-04-12 06:37:24
+ * Created at     : 2021-04-12 06:37:03
+ * Last modified  : 2021-04-16 03:34:08
  */
 
 import {StyleSheet} from 'react-native';

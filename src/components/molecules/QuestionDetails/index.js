@@ -1,5 +1,13 @@
+/**
+ * @summary Displays relevant information about a question (label, question & difficulty)
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:40:12
+ * Last modified  : 2021-04-16 03:41:31
+ */
+
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {oneOf, string} from 'prop-types';
 
 import {Description, DifficultyIndicator, Title} from 'components/atoms';

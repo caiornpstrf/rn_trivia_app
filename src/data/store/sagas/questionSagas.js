@@ -1,3 +1,11 @@
+/**
+ * @summary Handles every saga dispatch for questions state
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:51:54
+ * Last modified  : 2021-04-16 03:52:30
+ */
+
 import {call, put, takeLatest} from 'redux-saga/effects';
 
 import {isLoading, hasError} from '_store/actions/appState';

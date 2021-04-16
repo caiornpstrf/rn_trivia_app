@@ -1,3 +1,11 @@
+/**
+ * @summary
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:48:17
+ * Last modified  : 2021-04-16 03:48:43
+ */
+
 import Question from '_model/Question';
 
 export default class Assessment {

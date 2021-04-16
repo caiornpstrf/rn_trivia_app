@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /**
  * @summary Assessment screen
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
  * Created at     : 2021-04-14 03:43:37
- * Last modified  : 2021-04-16 02:13:44
+ * Last modified  : 2021-04-16 03:53:18
  */
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -98,8 +99,6 @@ const AssessmentScreen = ({route, navigation}) => {
     setShowButton(false);
     setQuestionNumber(questionNumber + 1);
     setAssessment(nextAssessment);
-
-    console.log(result.isCorrect, 'next: ' + nextDifficulty);
   };
 
   const concludeAssessment = () => {

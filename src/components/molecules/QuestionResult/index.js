@@ -5,8 +5,8 @@
  * @summary Result of a Question
  * @author Caio Reis <caio.oliveira.reis@gmail.com>
  *
- * Created at     : 2021-04-12 06:36:21 
- * Last modified  : 2021-04-12 06:36:59
+ * Created at     : 2021-04-12 06:36:21
+ * Last modified  : 2021-04-16 03:42:21
  */
 
 import React from 'react';

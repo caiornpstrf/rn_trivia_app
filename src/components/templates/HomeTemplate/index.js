@@ -1,3 +1,11 @@
+/**
+ * @summary Blank page for HomeScreen
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:47:44
+ * Last modified  : 2021-04-16 03:48:03
+ */
+
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {array, func, string} from 'prop-types';

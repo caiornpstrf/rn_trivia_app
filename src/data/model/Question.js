@@ -1,3 +1,11 @@
+/**
+ * @summary
+ * @author Caio Reis <caio.oliveira.reis@gmail.com>
+ *
+ * Created at     : 2021-04-16 03:49:56
+ * Last modified  : 2021-04-16 03:49:56
+ */
+
 export default class Question {
   category = '';
   type = '';
