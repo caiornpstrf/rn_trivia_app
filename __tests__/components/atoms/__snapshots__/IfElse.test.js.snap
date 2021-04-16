@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders onFalse correctly 1`] = `
+<Text>
+  onFalse rendered
+</Text>
+`;
+
+exports[`renders onTrue correctly 1`] = `
+<Text>
+  onTrue rendered
+</Text>
+`;

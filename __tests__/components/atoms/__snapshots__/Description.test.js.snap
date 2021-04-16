@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#171717",
+      "fontSize": 28,
+    }
+  }
+>
+  Description text
+</Text>
+`;

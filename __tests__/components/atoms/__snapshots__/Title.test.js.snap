@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with size big correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#343D58",
+        "fontWeight": "bold",
+      },
+      undefined,
+      Object {
+        "fontSize": 42,
+      },
+    ]
+  }
+>
+  Title text
+</Text>
+`;
+
+exports[`renders with size medium correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#343D58",
+        "fontWeight": "bold",
+      },
+      undefined,
+      Object {
+        "fontSize": 35,
+      },
+    ]
+  }
+>
+  Title text
+</Text>
+`;
+
+exports[`renders with size small correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#343D58",
+        "fontWeight": "bold",
+      },
+      undefined,
+      Object {
+        "fontSize": 28,
+      },
+    ]
+  }
+>
+  Title text
+</Text>
+`;
